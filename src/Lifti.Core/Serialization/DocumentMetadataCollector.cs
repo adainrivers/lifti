@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Lifti.Serialization
+﻿namespace Lifti.Serialization
 {
     /// <summary>
     /// Collects document metadata during a deserialization operation.

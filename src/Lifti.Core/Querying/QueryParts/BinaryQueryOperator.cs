@@ -1,7 +1,4 @@
-﻿using Lifti.Querying.QueryParts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System;
 
 namespace Lifti.Querying.QueryParts
 {
@@ -65,7 +62,7 @@ namespace Lifti.Querying.QueryParts
         /// is filtered to only those documents that matched the first.
         /// </summary>
         protected (IntermediateQueryResult leftResults, IntermediateQueryResult rightResults) EvaluateWithDocumentIntersection(
-            Func<IIndexNavigator> navigatorCreator, 
+            Func<IIndexNavigator> navigatorCreator,
             QueryContext queryContext)
         {
             if (queryContext is null)
@@ -96,10 +93,9 @@ namespace Lifti.Querying.QueryParts
                     // Filter the left side to only those documents that matched the right side
                     queryContext with { FilterToDocumentIds = rightResults.ToDocumentIdLookup() });
             }
-            
+
 
             return (leftResults, rightResults);
         }
     }
-
 }

@@ -1,6 +1,4 @@
-﻿
-using Lifti.Tokenization.Preprocessing;
-using Lifti.Tokenization.Stemming;
+﻿using Lifti.Tokenization.Preprocessing;
 using Lifti.Tokenization.TextExtraction;
 using System;
 using System.Collections.Generic;
@@ -145,7 +143,7 @@ namespace Lifti.Tokenization
                     )
                     // Unless the character is an ignored characters
                     && this.ignoreChars.Contains(character) == false
-               );
+                );
         }
 
         private void CaptureToken(TokenStore processedTokens, ref int tokenIndex, int start, int end, StringBuilder tokenBuilder)
